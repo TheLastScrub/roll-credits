@@ -86,8 +86,8 @@ let config = {
                 fadeOutDelayMs: 23000
             }, 
             imagePath: sampleImgPath,
-            imageWidth: 1539,
-            imageHeight: 720
+            imageWidth: 1078,
+            imageHeight: 1440
         }
     ]
 };
