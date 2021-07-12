@@ -40,7 +40,7 @@ The full list of API functions is currently:
 
 Have objects scroll down the screen, similar to the ending credits of a movie or television program.
 
-```
+```js
     // will not currently work
     game.RollCredits.StartRollingCredits(config);
 ```
@@ -48,7 +48,7 @@ Have objects scroll down the screen, similar to the ending credits of a movie or
 
 Have objects (currently text and images) fade in and out, similar to the title cards at the begining of a movie, or in a trailer for a movie.
 
-```
+```js
     // see sample script for example of how config should look
     game.RollCredits.StartShowTitleCredits(config);
 ```
