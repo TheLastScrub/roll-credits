@@ -16,6 +16,12 @@ VERY early work in progress.  'Title Card' functionality largely working, but re
 
 Image used under the [Creative Commons License](https://creativecommons.org/publicdomain/zero/1.0/deed.en) and comes from [Pixabay](https://pixabay.com/).
 
+## Installation
+
+This module is not available directly in Foundry.  To install, paste the following link into the _Manifest URL_ field in the Foundry package manager:
+
+https://raw.githubusercontent.com/TheLastScrub/roll-credits/main/module.json
+
 ## API
 
 The module works by exposing several functions to call via macros.  For example, to trigger the module to hide the current scene, call the 'blackout' function like so:
