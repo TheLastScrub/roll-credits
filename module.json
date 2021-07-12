@@ -13,5 +13,7 @@
     "esmodules": [
         "scripts/main.js"
       ],
-    "coreTranslation": false
+    "coreTranslation": false,
+    "manifest": "https://github.com/TheLastScrub/roll-credits/blob/main/module.json",
+    "download": "https://github.com/TheLastScrub/roll-credits/archive/refs/tags/v1.0.0.zip"
   }
