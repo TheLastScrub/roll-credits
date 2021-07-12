@@ -1,0 +1,17 @@
+{
+    "name": "roll-credits",
+    "title": "Roll Credits",
+    "description": "Allow showing end credits, similar to a movie or television show.",
+    "author": "TheLastScrub",
+    "version": "1.0.0",
+    "minimumCoreVersion": "0.8.8",
+    "compatibleCoreVersion": "0.8.8",
+    "languages": [],
+    "packs": [],
+    "flags": {},
+    "socket": true,
+    "esmodules": [
+        "scripts/main.js"
+      ],
+    "coreTranslation": false
+  }
