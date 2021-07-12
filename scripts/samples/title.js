@@ -1,3 +1,6 @@
+let sampleImgPath = 'modules/roll-credits/documentation/img/Venice_carnival_costume_with_mask_and_hat_-_transparent.png';
+
+// See PIXI.js documentation on their TextStyle class for more information.
 let titleTextStyle = new PIXI.TextStyle({
     fontFamily: "Courier New",
     fontSize: 120,
@@ -30,12 +33,12 @@ let config = {
                 zIndexOffset: 0,
             },
             timing: {
-                fadeAlphaShiftIncrement: 0.01,
+                fadeAlphaShiftIncrement: 0.005,
                 fadeInDelayMs: 2000,
-                fadeOutDelayMs: 22000
+                fadeOutDelayMs: 20000
             },
              
-            text: 'OPERATION: ALICE', 
+            text: 'OPERATION: TITLE CARD', 
             textStyle: titleTextStyle
         },
         {
@@ -46,11 +49,11 @@ let config = {
                 zIndexOffset: 0
             },
             timing: {
-                fadeAlphaShiftIncrement: 0.01,
+                fadeAlphaShiftIncrement: 0.005,
                 fadeInDelayMs: 4000,
                 fadeOutDelayMs: 7000
             }, 
-            text: 'NEW YORK CITY, NEW YORK', 
+            text: 'SOME STATE, SOME CITY', 
             textStyle: normalTextStyle
             
         },
@@ -62,11 +65,11 @@ let config = {
                 zIndexOffset: 0
             },
             timing: {
-                fadeAlphaShiftIncrement: 0.01,
+                fadeAlphaShiftIncrement: 0.005,
                 fadeInDelayMs: 10000,
                 fadeOutDelayMs: 13000
             }, 
-            text: '10 AUG, 1995', 
+            text: 'DAY, MONTH YEAR', 
             textStyle: normalTextStyle
             
         },
@@ -78,14 +81,17 @@ let config = {
                 zIndexOffset: 0
             },
             timing: {
-                fadeAlphaShiftIncrement: 0.01,
-                fadeInDelayMs: 14000,
-                fadeOutDelayMs: 22000
+                fadeAlphaShiftIncrement: 0.005,
+                fadeInDelayMs: 15000,
+                fadeOutDelayMs: 23000
             }, 
-            imagePath: 'test-data/68.Wright.png'
+            imagePath: sampleImgPath,
+            imageWidth: 1539,
+            imageHeight: 720
         }
     ]
 };
 
+//game.RollCredits.Blackout();
 game.RollCredits.ZoomOutToFullCanvas();
 game.RollCredits.StartShowTitleCredits(config);

@@ -191,6 +191,14 @@ export default class Credits{
                         sprite.y = 0;
                         sprite.alpha = 0.0;
 
+                        if(cmd.hasOwnProperty('imageWidth') && cmd.imageWidth != null){
+                            sprite.width = cmd.imageWidth;
+                        }
+
+                        if(cmd.hasOwnProperty('imageHeight') && cmd.imageHeight != null){
+                            sprite.height = 1000;
+                        }                        
+
                         container.addChild(sprite);
 
                         this.activeCommands.push({
@@ -308,10 +316,6 @@ export default class Credits{
                     }                    
                 }                
             }
-
-            //this.activeCommands.forEach(function(cmd, index, array) {
-                
-            //});
         }
     }
 
