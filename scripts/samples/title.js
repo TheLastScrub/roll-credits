@@ -1,5 +1,7 @@
 let sampleImgPath = 'modules/roll-credits/documentation/img/Venice_carnival_costume_with_mask_and_hat_-_transparent.png';
 
+let sampleAudioPath = 'modules/roll-credits/documentation/audio/techtheist - He_WhenDancingOnCadaver.mp3';
+
 // See PIXI.js documentation on their TextStyle class for more information.
 let titleTextStyle = new PIXI.TextStyle({
     fontFamily: "Courier New",
@@ -88,6 +90,15 @@ let config = {
             imagePath: sampleImgPath,
             imageWidth: 1078,
             imageHeight: 1440
+        },
+        {
+            type: 'audio',
+            url: sampleAudioPath,
+            volume: 0.7,
+            offset: 0,
+            startTime: 0,
+            fadeOutTime: 18000,
+            fadeOutDurationMs: 3000
         }
     ]
 };

@@ -114,7 +114,13 @@ export default class Credits{
         // obliterate every container we added to the stage
         this.activeCommands.forEach(function(cmd, index, array) {
             try{
-                if(cmd.config.type !== 'blackout')
+                if(cmd.config.type === 'blackout'){
+
+                }
+                else if(cmd.config.type === 'audio'){
+                    cmd.sound.stop();
+                }
+                else
                 {
                     let container = cmd.controls.containerControl;
                     
@@ -145,16 +151,36 @@ export default class Credits{
             this.activeAnimationType = 'TITLE';
             
             let app = game.canvas.app;
+            
+            for(let i = 0; i < config.commands.length; i++){
+            //config.commands.forEach(cmd => {
+                let cmd = config.commands[i];
 
-            config.commands.forEach(cmd => {
                 cmd.isComplete = false;
+                //this.activeCommands[i].isComplete = false;
 
                 if(cmd.type === 'blackout'){
                     this.activeCommands.push({
                         config: cmd,
                     });
                 }
+                else if(cmd.type === 'audio'){
+
+                    let sound = await game.audio.create({
+                        src: cmd.url,
+                        preload: true,
+                        singleton: true
+                    });
+                    
+                    await sound.load({autoplay: false});
+
+                    this.activeCommands.push({
+                        config: cmd,
+                        sound: sound
+                    });
+                }
                 else{
+
                     let container = new PIXI.Container();
                     container.x = game.canvas.dimensions.width / 2.0 + (game.canvas.dimensions.height / 2.0 * cmd.positioning.offsetX);
                     container.y = game.canvas.dimensions.height / 2.0 + (game.canvas.dimensions.height / 2.0 * cmd.positioning.offsetY);
@@ -211,7 +237,8 @@ export default class Credits{
                         });
                     }
                 }                
-            });    
+            //});
+            }
             
             // log the start time for the animation so we can time things later
             let d = new Date();
@@ -270,6 +297,21 @@ export default class Credits{
                             this.blackout();
                         }                        
                     }
+                }
+                else if(cmd.config.type === 'audio'){
+                    let sound = this.activeCommands[i].sound;
+
+                    if(cmd.sound.playing !== true && cmd.config.startTime <= timeIntoAnimation && cmd.config.isComplete === false){
+                        
+                        sound.play({loop: false, offset: 0, volume: cmd.config.volume, fade: cmd.config.fadeOutDurationMs});
+
+                    }
+                    else if(cmd.sound.playing === true && cmd.config.fadeOutTime <= timeIntoAnimation){
+
+                        sound.fade(0, {duration: cmd.config.fadeOutDurationMs});
+
+                        this.activeCommands[i].config.isComplete = true;
+                    }                    
                 }
                 else{
                     if(cmd.config.type === 'text'){

@@ -15,6 +15,7 @@ VERY early work in progress.  'Title Card' functionality largely working, but re
 ![Fade_In_Title_Demo](./documentation/img/fade_in_title_demo.gif)
 
 Image used under the [Creative Commons License](https://creativecommons.org/publicdomain/zero/1.0/deed.en) and comes from [Pixabay](https://pixabay.com/).
+Audio used ('He WhenDancingOnCadaver') under the [Creative Commons License v4.0](https://creativecommons.org/licenses/by/4.0/legalcode) and comes from [techtheist](https://freemusicarchive.org/music/techtheist/fma2021-part-2/hewhendancingoncadaver).
 
 ## Installation
 
