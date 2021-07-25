@@ -3,7 +3,7 @@
     "title": "Roll Credits",
     "description": "Allow showing end credits, similar to a movie or television show.",
     "author": "TheLastScrub",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "minimumCoreVersion": "0.8.8",
     "compatibleCoreVersion": "0.8.8",
     "languages": [],
