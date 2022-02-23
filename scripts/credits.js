@@ -292,9 +292,11 @@ export default class Credits{
                     else if(this.isBlackOut === false && cmd.config.isComplete === false && cmd.config.timing.fadeInDelayMs <= timeIntoAnimation){
                         if(cmd.config.blackout.tint !== null){
                             this.blackout(cmd.config.blackout.tint);
+                            this.activeCommands[i].config.isComplete = true;
                         }
                         else{
                             this.blackout();
+                            this.activeCommands[i].config.isComplete = true;
                         }                        
                     }
                 }
